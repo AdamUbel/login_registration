@@ -1,0 +1,79 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.login-container,
+.register-container {
+  width: 500px;
+  margin-top: 75px;
+  padding: 45px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  box-shadow: 5px 10px 20px lightslategrey;
+}
+
+.page-title {
+  font-family: sans-serif;
+}
+
+.btn,
+.logout-btn,
+.home-btn {
+  cursor: pointer;
+}
+
+label {
+  font-family: sans-serif;
+}
+
+input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.page-title,
+h2 {
+  text-align: center;
+  text-decoration: underline teal;
+}
+
+.warnings {
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 50px;
+  width: 590px;
+}
+
+.logout-btn,
+.home-btn {
+  margin-top: 25px;
+}
+
+.btn {
+  width: 100px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.table-container {
+  margin-top: 75px;
+  padding: 45px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  box-shadow: 5px 10px 20px lightslategrey;
+  width: fit-content;
+}

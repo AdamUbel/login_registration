@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+
+<body>
+
+  <h1 class='page-title'>Home Page</h1>
+
+  <main class='main-container flex justify-evenly'>
+
+    <div class='login-container'>
+      <h2>Login</h2>
+
+      <form action="/verify-login" method='post' class='flex flex-column align-center'>
+        <label>Email:</label>
+        <input type="text" name="email">
+        <label>Password:</label>
+        <input type="password" name="password">
+        <input type="submit" value="Login" class='btn'>
+      </form>
+
+    </div>
+
+
+    <div class='register-container'>
+      <h2>Register</h2>
+
+      <form action="/verify-register" method='post' class='flex flex-column align-center'>
+        <label>First Name:</label>
+        <input type="text" name="first_name">
+        <label>Last Name:</label>
+        <input type="text" name="last_name">
+        <label>Email:</label>
+        <input type="text" name="email">
+        <label>Password:</label>
+        <input type="password" name="password">
+        <label>Confirm Password:</label>
+        <input type="password" name="confirm_password">
+        <input type="submit" value="Register" class='btn'>
+      </form>
+
+    </div>
+
+
+  </main>
+
+  <section class='main-container flex justify-evenly'>
+
+    <div class='flex flex-column align-center warnings'>
+      {% with messages = get_flashed_messages(category_filter=["login"]) %}
+      {% if messages %}
+      {% for message in messages %}
+      <p>{{message}}</p>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+
+    <div class='flex flex-column align-center warnings'>
+      {% with messages = get_flashed_messages(category_filter=["register"]) %}
+      {% if messages %}
+      {% for message in messages %}
+      <p>{{message}}</p>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+
+  </section>
+
+
+</body>
+
+</html>
